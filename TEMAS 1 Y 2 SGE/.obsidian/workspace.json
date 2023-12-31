@@ -1,0 +1,153 @@
+{
+  "main": {
+    "id": "ac54071eb780d2d4",
+    "type": "split",
+    "children": [
+      {
+        "id": "387cde0ef01d3bd4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8fb72f0ade58e609",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TEMAS 1 Y 2 SGE.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a0cf254c023d20ce",
+    "type": "split",
+    "children": [
+      {
+        "id": "80c817ef4158f293",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f05d15fb12120399",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "178affcf4947493e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "834a193137f8f3e7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4660a216e8b8098f",
+    "type": "split",
+    "children": [
+      {
+        "id": "a8fc2e3232b720d7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6a7f2f7121c1dd9e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "TEMAS 1 Y 2 SGE.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "55744bb24a8e95ef",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "TEMAS 1 Y 2 SGE.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3a17d29e002f2313",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1e2753de1349f360",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "TEMAS 1 Y 2 SGE.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo canvas": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "8fb72f0ade58e609",
+  "lastOpenFiles": [
+    "Aspose.Words.e2fbd1c4-b35a-4605-abe2-4d5211313758.002.png",
+    "Aspose.Words.e2fbd1c4-b35a-4605-abe2-4d5211313758.001.png"
+  ]
+}
