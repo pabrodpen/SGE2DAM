@@ -1,0 +1,1 @@
+#dar una cadena y un caracter.Introducir el caracter entre cada caracter de la cadena

@@ -1,0 +1,1 @@
+#lee una caden y muestra:inicilaes, la cadena con las iniciales en mayus y las palabras que empiecen por a
