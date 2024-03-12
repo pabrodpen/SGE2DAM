@@ -1,0 +1,49 @@
+<odoo>
+  <data>
+     <record model="ir.ui.view" id="recepcion.checkin_tree">
+            <field name="name">recepcion.checkin.tree</field>
+            <field name="model">recepcion.checkin</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="guest_name"/>
+                    <field name="checkin_date"/>
+                    <field name="checkout_date"/>
+                    <field name="comentario"/>
+                    <field name="room_id"/>
+                    <field name="room_type"/>
+                    <field name="price_per_day"/>
+                    <field name="price_total"/>
+
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="recepcion.checkin_form">
+            <field name="name">recepcion.checkin.form</field>
+            <field name="model">recepcion.checkin</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group colspan="2" col="2">
+                        <field name="guest_name"/>
+                        <field name="checkin_date"/>
+                        <field name="checkout_date"/>
+                        <field name="room_id"/>
+                        <field name="room_type"/>
+                        <field name="price_per_day"/>
+                        <field name="price_total"/>
+
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="recepcion.checkin_action_window">
+            <field name="name">recepcion.checkin.action_window</field>
+            <field name="res_model">recepcion.checkin</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        
+        <menuitem name="recepcion" id="recepcion.menu_root"/>
+  </data>
+</odoo>
+
+

@@ -1,0 +1,6 @@
+Crear una aplicación con python que a partir de un año que se pase como parámetro, genere un fichero de texto con la lista los productos vendidos en un mes determinado agrupados por orden de ventas.
+
+$ python3 ventas.py 2023
+
+Como salida se generaran 12 ficheros de texto (2023enero.lst, 2023febrero.lst .... 2023diciembre.lst)
+

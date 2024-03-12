@@ -1,0 +1,57 @@
+<odoo>
+    <report
+        id="alumnos_fcties.informe_empresa"
+        string="Informe sobre empresas"
+        model="alumnos_fcties.empresa"
+        report_type="qweb-pdf"
+        name="alumnos_fcties.informe_empresa_view"
+        file="alumnos_fcties.informe_empresa_view"/>
+
+    <template id="informe_empresa_view">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="empresa">
+                <div class="page">
+                    <h1 t-field="empresa.nombre"/>
+                    <div>
+                        <strong>Teléfono: </strong>
+                        <span t-field="empresa.tlf"/>
+                    </div>
+                    <div>
+                        <strong>Correo electrónico: </strong>
+                        <span t-field="empresa.correo"/>
+                    </div>
+                    <div>
+                        <strong>Dirección: </strong>
+                        <span t-field="empresa.direccion"/>
+                    </div>
+                    <div>
+                        <strong>Alumnos: </strong>
+                        <table class="table-with-spacing">
+                            <thead>
+                                <tr>
+                                    <th class="column-header">Nombre</th>
+                                    <th class="column-header">Apellidos</th>
+                                    <th class="column-header">Teléfono</th>
+                                    <th class="column-header">Período de prácticas</th>
+                                    <th class="column-header">Ciclo formativo</th>
+                                    <!-- Agrega más columnas según tus necesidades -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="empresa.alumnos" t-as="alumno">
+                                    <tr>
+                                        <td><span t-field="alumno.nombre"/></td>
+                                        <td><span t-field="alumno.apellidos"/></td>
+                                        <td><span t-field="alumno.telefono"/></td>
+                                        <td><span t-field="alumno.periodo_practicas"/></td>
+                                        <td><span t-field="alumno.ciclo_formativo"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

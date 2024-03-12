@@ -1,0 +1,54 @@
+Implementar usando la herramienta scaffold un módulo en ODOO para la gestión del Check-in de la recepción de un hotel.
+
+Modelo de Check-in:
+
+Atributo
+
+Descripción
+
+guest_name
+
+Nombre y apellidos del cliente
+
+checkin_date
+
+Fecha de entrada.
+
+checkout_date
+
+Fecha de salida prevista.
+
+room_id
+
+Número de habitación.
+
+room_type
+
+Tipo de habitación: standard, deluxe, suite
+
+price_per_day
+
+Precio diario de la estancia.
+
+total_price
+
+Campo calculado con el importe total de la estancia a partir de la fecha de entrada, de salida y el precio por día.
+
+Ayuda: En Python las fechas se pueden restar y en la api hay definido un modelo para fechas (Date) que permite extraer los días (days) a partir del resultado.
+
+rdo=fecha1-fecha2
+
+rdo.days
+
+
+El modelo debe incluir una función que permita calcular
+
+Se pide:
+
+Implementar el modelo.
+
+Implementar las vistas básicas (form y tree).
+
+Diseñar un informe con los Check-ins realizados por el cliente.
+
+Se deberá entregar el módulo comprimido en ZIP con un archivo txt con el nombre del alumno y la fecha.

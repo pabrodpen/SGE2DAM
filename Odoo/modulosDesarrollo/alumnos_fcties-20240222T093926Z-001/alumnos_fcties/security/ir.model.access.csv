@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_alumnos_fcties_alumno,alumnos_fcties.alumno,model_alumnos_fcties_alumno,base.group_user,1,1,1,1
+access_alumnos_fcties_empresa,alumnos_fcties.empresa,model_alumnos_fcties_empresa,base.group_user,1,1,1,1

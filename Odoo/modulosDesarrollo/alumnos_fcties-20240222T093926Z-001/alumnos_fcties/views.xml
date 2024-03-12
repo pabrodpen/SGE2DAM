@@ -1,0 +1,122 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="alumnos_fcties.alumno_tree">
+      <field name="name">Alumnos</field>
+      <field name="model">alumnos_fcties.alumno</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre"/>
+          <field name="apellidos"/>
+          <field name="curso_academico"/>
+          <field name="periodo_practicas"/>
+          <field name="empresa"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="alumnos_fcties.empresa_tree">
+      <field name="name">Empresas</field>
+      <field name="model">alumnos_fcties.empresa</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre"/>
+          <field name="contacto"/>
+          <field name="tlf"/>
+          <field name="correo"/>
+          <field name="direccion"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="alumnos_fcties.alumno_form">
+      <field name="name">Formulario alumnos</field>
+      <field name="model">alumnos_fcties.alumno</field>
+      <field name="arch" type="xml">
+        <form>
+          <group colspan="2" col="2">
+            <field name="nombre"/>
+            <field name="apellidos"/>
+            <field name="fecha_nacimiento"/>
+            <field name="curso_academico"/>
+            <field name="telefono"/>
+            <field name="ciclo_formativo"/>
+            <field name="periodo_practicas"/>
+            <field name="nota_media"/>
+            <field name="nota_media_texto"/>
+            <field name="empresa"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="alumnos_fcties.empresa_form">
+      <field name="name">Formulario empresa</field>
+      <field name="model">alumnos_fcties.empresa</field>
+      <field name="arch" type="xml">
+        <form>
+          <group colspan="2" col="2">
+            <field name="nombre"/>
+          <field name="contacto"/>
+          <field name="tlf"/>
+          <field name="correo"/>
+          <field name="direccion"/>
+          <field name="alumnos"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="alumnos_fcties.alumno_action_window">
+      <field name="name">Alumnos</field>
+      <field name="res_model">alumnos_fcties.alumno</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="alumnos_fcties.empresa_action_window">
+      <field name="name">Empresas</field>
+      <field name="res_model">alumnos_fcties.empresa</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem name="FCT" id="alumnos_fcties.menu_root"/>
+
+    <menuitem name="Alumnos" id="alumnos_fcties.menu_1" parent="alumnos_fcties.menu_root" action="alumnos_fcties.alumno_action_window"/>
+    <menuitem name="Empresas" id="alumnos_fcties.menu_2" parent="alumnos_fcties.menu_root" action="alumnos_fcties.empresa_action_window"/>
+
+
+    <!-- Search views -->
+
+    <record model="ir.ui.view" id="alumnos_fcties_search">
+      <field name="name">Búsquedas alumno</field>
+      <field name="model">alumnos_fcties.alumno</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="apellidos"/>
+          <field name="curso_academico"/>
+          <field name="periodo_practicas"/>
+          <field name="empresa"/>
+          <filter string="Notas mayor a 8" name="nota" domain="[('nota_media', '&gt;', '8')]"/>
+        </search>
+      </field>
+    </record>
+
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="alumnos_fcties.menu_1" parent="alumnos_fcties.menu_root"/>
+    <menuitem name="Menu 2" id="alumnos_fcties.menu_2" parent="alumnos_fcties.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="alumnos_fcties.menu_1_list" parent="alumnos_fcties.menu_1"
+              action="alumnos_fcties.action_window"/>
+    <menuitem name="Server to list" id="alumnos_fcties" parent="alumnos_fcties.menu_2"
+              action="alumnos_fcties.action_server"/>
+-->
+  </data>
+</odoo>

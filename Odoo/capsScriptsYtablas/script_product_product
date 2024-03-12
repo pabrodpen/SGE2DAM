@@ -1,0 +1,16 @@
+CREATE TABLE product_product (id SERIAL NOT NULL, message_main_attachment_id INTEGER, default_code CHARACTER VARYING, active BOOLEAN, product_tmpl_id INTEGER NOT NULL, barcode CHARACTER VARYING, combination_indices CHARACTER VARYING, volume NUMERIC, weight NUMERIC, can_image_variant_1024_be_zoomed BOOLEAN, create_uid INTEGER, create_date TIMESTAMP(6) WITHOUT TIME ZONE, write_uid INTEGER, write_date TIMESTAMP(6) WITHOUT TIME ZONE, PRIMARY KEY (id), CONSTRAINT product_product_create_uid_fkey FOREIGN KEY (create_uid) REFERENCES "res_users" ("id") ON DELETE SET NULL, CONSTRAINT product_product_message_main_attachment_id_fkey FOREIGN KEY (message_main_attachment_id) REFERENCES "ir_attachment" ("id") ON DELETE SET NULL, CONSTRAINT product_product_product_tmpl_id_fkey FOREIGN KEY (product_tmpl_id) REFERENCES "product_template" ("id") ON DELETE CASCADE, CONSTRAINT product_product_write_uid_fkey FOREIGN KEY (write_uid) REFERENCES "res_users" ("id") ON DELETE SET NULL, UNIQUE (barcode));
+COMMENT ON TABLE product_product IS 'Product';
+COMMENT ON COLUMN product_product.message_main_attachment_id IS 'Main Attachment';
+COMMENT ON COLUMN product_product.default_code IS 'Internal Reference';
+COMMENT ON COLUMN product_product.active IS 'Active';
+COMMENT ON COLUMN product_product.product_tmpl_id IS 'Product Template';
+COMMENT ON COLUMN product_product.barcode IS 'Barcode';
+COMMENT ON COLUMN product_product.combination_indices IS 'Combination Indices';
+COMMENT ON COLUMN product_product.volume IS 'Volume';
+COMMENT ON COLUMN product_product.weight IS 'Weight';
+COMMENT ON COLUMN product_product.can_image_variant_1024_be_zoomed IS 'Can Variant Image 1024 be zoomed';
+COMMENT ON COLUMN product_product.create_uid IS 'Created by';
+COMMENT ON COLUMN product_product.create_date IS 'Created on';
+COMMENT ON COLUMN product_product.write_uid IS 'Last Updated by';
+COMMENT ON COLUMN product_product.write_date IS 'Last Updated on';
+COMMENT ON CONSTRAINT product_product_barcode_uniq ON product_product IS 'unique(barcode)';

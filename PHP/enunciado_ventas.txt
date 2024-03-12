@@ -1,0 +1,7 @@
+Crear una aplicación con PHP que liste los productos vendidos en un rango de fechas agrupados por orden de ventas.
+
+Se pide:
+
+- Formulario de entrada de datos.
+
+- Página con el listado de ventas, un banner con la imagen de la compañía y en el pie la fecha de generación.

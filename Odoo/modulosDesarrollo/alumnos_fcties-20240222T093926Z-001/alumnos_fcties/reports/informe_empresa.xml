@@ -1,0 +1,67 @@
+<odoo>
+    <report
+        id="alumnos_fcties.informe_empresas"
+        string="Informe sobre todas las empresas"
+        model="alumnos_fcties.empresa"
+        report_type="qweb-pdf"
+        name="alumnos_fcties.informe_empresas_view"
+        file="alumnos_fcties.informe_empresas_view"/>
+
+    <template id="informe_empresas_view">
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <h1>Informe sobre todas las empresas</h1>
+                <table class="table-with-spacing">
+                    <thead>
+                        <tr>
+                            <th class="column-header">Nombre Empresa</th>
+                            <th class="column-header">Teléfono</th>
+                            <th class="column-header">Correo electrónico</th>
+                            <th class="column-header">Dirección</th>
+                            <!-- Agrega más columnas según tus necesidades -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="docs" t-as="empresa">
+                            <tr>
+                                <td><span t-field="empresa.nombre"/></td>
+                                <td><span t-field="empresa.tlf"/></td>
+                                <td><span t-field="empresa.correo"/></td>
+                                <td><span t-field="empresa.direccion"/></td>
+                                <!-- Puedes agregar más campos según tus necesidades -->
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+
+                <h2>Detalles de los alumnos:</h2>
+                <table class="table-with-spacing">
+                    <thead>
+                        <tr>
+                            <th class="column-header">Nombre</th>
+                            <th class="column-header">Apellidos</th>
+                            <th class="column-header">Teléfono</th>
+                            <th class="column-header">Período de prácticas</th>
+                            <th class="column-header">Ciclo formativo</th>
+                            <!-- Agrega más columnas según tus necesidades -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="docs" t-as="empresa">
+                            <t t-foreach="empresa.alumnos" t-as="alumno">
+                                <tr>
+                                    <td><span t-field="alumno.nombre"/></td>
+                                    <td><span t-field="alumno.apellidos"/></td>
+                                    <td><span t-field="alumno.telefono"/></td>
+                                    <td><span t-field="alumno.periodo_practicas"/></td>
+                                    <td><span t-field="alumno.ciclo_formativo"/></td>
+                                    <!-- Ajusta los campos según tus necesidades -->
+                                </tr>
+                            </t>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+</odoo>

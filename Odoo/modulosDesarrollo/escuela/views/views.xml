@@ -1,0 +1,198 @@
+<odoo>
+    <data>
+        
+        
+        
+        
+        
+       
+        
+        <record model="ir.ui.view" id="escuela.escuelas_tree">
+            <field name="name">escuela.escuelas.tree</field>
+            <field name="model">escuela.escuelas</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="denominacion"/>
+                    <field name="logo"/>
+                    <field name="contacto"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="escuela.escuelas_form">
+            <field name="name">escuela.escuelas.form</field>
+            <field name="model">escuela.escuelas</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group colspan="2" col="2">
+                       <field name="denominacion"/>
+                       <field name="logo"/>
+                       <field name="contacto"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        
+        
+        
+        
+        <record model="ir.ui.view" id="escuela.cursos_tree">
+            <field name="name">escuela.cursos.tree</field>
+            <field name="model">escuela.cursos</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="titulo"/>
+                    <field name="duracion_dias"/>
+                    <field name="horas"/>
+                    <field name="precio"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="escuela.cursos_form">
+            <field name="name">escuela.cursos.form</field>
+            <field name="model">escuela.cursos</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group colspan="2" col="2">
+                        <field name="titulo"/>
+                    	<field name="duracion_dias"/>
+                    	<field name="horas"/>
+                    	<field name="precio"/>
+                    	</group>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        
+        
+        
+        
+        
+        <record model="ir.ui.view" id="escuela.monitores_tree">
+            <field name="name">escuela.monitores.tree</field>
+            <field name="model">escuela.monitores</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="codigo"/>
+                    <field name="nombre"/>
+                    <field name="escuela"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="escuela.monitores_form">
+            <field name="name">escuela.monitores.form</field>
+            <field name="model">escuela.monitores</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group colspan="2" col="2">
+                        <field name="codigo"/>
+                    	<field name="nombre"/>
+                    	<field name="escuela"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        
+        
+        
+          <record model="ir.ui.view" id="escuela.alumnos_tree">
+            <field name="name">escuela.alumnos.tree</field>
+            <field name="model">escuela.alumnos</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="numero"/>
+                    <field name="nombre"/>
+
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="escuela.alumnos_form">
+            <field name="name">escuela.alumnos.form</field>
+            <field name="model">escuela.alumnos</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group colspan="2" col="2">
+                        <field name="numero"/>
+                    	<field name="nombre"/>
+
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+         <record model="ir.actions.act_window" id="escuela.escuelas_action_window">
+            <field name="name">escuela.escuelas.action_window</field>
+            <field name="res_model">escuela.escuelas</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        
+         <record model="ir.actions.act_window" id="escuela.cursos_action_window">
+            <field name="name">escuela.cursos.action_window</field>
+            <field name="res_model">escuela.cursos</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        
+         <record model="ir.actions.act_window" id="escuela.monitores_action_window">
+            <field name="name">escuela.monitores.action_window</field>
+            <field name="res_model">escuela.monitores</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        
+         <record model="ir.actions.act_window" id="escuela.alumnos_action_window">
+            <field name="name">escuela.alumnos.action_window</field>
+            <field name="res_model">escuela.alumnos</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <menuitem name="escuela" id="escuela.menu_root"/>
+        <menuitem name="Escuelas" id="escuela.escuelas_menu" parent="escuela.menu_root" action="escuela.escuelas_action_window"/>
+        <menuitem name="Cursos" id="escuela.cursos_menu" parent="escuela.menu_root" action="escuela.cursos_action_window"/>        		     
+        <menuitem name="Monitores" id="escuela.monitores_menu" parent="escuela.menu_root" action="escuela.monitores_action_window"/>        
+        <menuitem name="Alumnos" id="escuela.alumnos_menu" parent="escuela.menu_root" action="escuela.alumnos_action_window"/>
+
+
+        
+    </data>
+</odoo>
+

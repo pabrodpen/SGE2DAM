@@ -1,0 +1,17 @@
+CREATE TABLE stock_valuation_layer (id SERIAL NOT NULL, company_id INTEGER NOT NULL, product_id INTEGER NOT NULL, quantity NUMERIC, unit_cost NUMERIC, value NUMERIC, remaining_qty NUMERIC, remaining_value NUMERIC, description CHARACTER VARYING, stock_valuation_layer_id INTEGER, stock_move_id INTEGER, account_move_id INTEGER, create_uid INTEGER, create_date TIMESTAMP(6) WITHOUT TIME ZONE, write_uid INTEGER, write_date TIMESTAMP(6) WITHOUT TIME ZONE, PRIMARY KEY (id), CONSTRAINT stock_valuation_layer_account_move_id_fkey FOREIGN KEY (account_move_id) REFERENCES "account_move" ("id") ON DELETE SET NULL, CONSTRAINT stock_valuation_layer_company_id_fkey FOREIGN KEY (company_id) REFERENCES "res_company" ("id") ON DELETE RESTRICT, CONSTRAINT stock_valuation_layer_create_uid_fkey FOREIGN KEY (create_uid) REFERENCES "res_users" ("id") ON DELETE SET NULL, CONSTRAINT stock_valuation_layer_product_id_fkey FOREIGN KEY (product_id) REFERENCES "product_product" ("id") ON DELETE RESTRICT, CONSTRAINT stock_valuation_layer_stock_move_id_fkey FOREIGN KEY (stock_move_id) REFERENCES "stock_move" ("id") ON DELETE SET NULL, CONSTRAINT stock_valuation_layer_stock_valuation_layer_id_fkey FOREIGN KEY (stock_valuation_layer_id) REFERENCES "stock_valuation_layer" ("id") ON DELETE SET NULL, CONSTRAINT stock_valuation_layer_write_uid_fkey FOREIGN KEY (write_uid) REFERENCES "res_users" ("id") ON DELETE SET NULL);
+COMMENT ON TABLE stock_valuation_layer IS 'Stock Valuation Layer';
+COMMENT ON COLUMN stock_valuation_layer.company_id IS 'Company';
+COMMENT ON COLUMN stock_valuation_layer.product_id IS 'Product';
+COMMENT ON COLUMN stock_valuation_layer.quantity IS 'Quantity';
+COMMENT ON COLUMN stock_valuation_layer.unit_cost IS 'Unit Value';
+COMMENT ON COLUMN stock_valuation_layer.value IS 'Total Value';
+COMMENT ON COLUMN stock_valuation_layer.remaining_qty IS 'Remaining Qty';
+COMMENT ON COLUMN stock_valuation_layer.remaining_value IS 'Remaining Value';
+COMMENT ON COLUMN stock_valuation_layer.description IS 'Description';
+COMMENT ON COLUMN stock_valuation_layer.stock_valuation_layer_id IS 'Linked To';
+COMMENT ON COLUMN stock_valuation_layer.stock_move_id IS 'Stock Move';
+COMMENT ON COLUMN stock_valuation_layer.account_move_id IS 'Journal Entry';
+COMMENT ON COLUMN stock_valuation_layer.create_uid IS 'Created by';
+COMMENT ON COLUMN stock_valuation_layer.create_date IS 'Created on';
+COMMENT ON COLUMN stock_valuation_layer.write_uid IS 'Last Updated by';
+COMMENT ON COLUMN stock_valuation_layer.write_date IS 'Last Updated on';
