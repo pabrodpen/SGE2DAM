@@ -1,0 +1,165 @@
+{
+  "main": {
+    "id": "6c52d4018defd4fc",
+    "type": "split",
+    "children": [
+      {
+        "id": "7fce2ffae46f6612",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cf40e74edd37f089",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CursoPyhton3Basico/FUNDAMENTOS BÁSICOS.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7c1fd9d4180d9add",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.12"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1e8da10b2c2ae7a1",
+    "type": "split",
+    "children": [
+      {
+        "id": "60452a5e2820bd32",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0d3296bbc366e111",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ac98823ef7c04f88",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3dfda4543eb2101f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "12b05df7b8873192",
+    "type": "split",
+    "children": [
+      {
+        "id": "3aa704217da47c26",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5d66e4d9c2b89ca4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CursoPyhton3Basico/FUNDAMENTOS BÁSICOS.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "aba81c639f3cb4b7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CursoPyhton3Basico/FUNDAMENTOS BÁSICOS.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "848caf01156c697c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "82e3147f0ee0cf85",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CursoPyhton3Basico/FUNDAMENTOS BÁSICOS.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "7c1fd9d4180d9add",
+  "lastOpenFiles": [
+    "PabloRodriguezCertificadoPhpBasico.pdf",
+    "PabloRodriguezCursoPython.pdf"
+  ]
+}

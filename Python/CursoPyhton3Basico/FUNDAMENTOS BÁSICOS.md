@@ -1337,3 +1337,218 @@ De tal manera que otro usuario, en otro entorno, teniendo este fichero pude repr
 
 
 
+## PROGRAMACIÓN ESTRUCTURADA Y MODULAR
+
+Así se declara una función:
+
+```
+def factorial(n):
+"""Calcula el factorial de un número""" 
+resultado = 1
+for i in range(1,n+1):
+resultado*=i
+return resultado
+```
+
+Se llama así:
+
+```
+factorial(5)
+```
+-->salida 120
+
+Las constantes se declaran en mayúsculas Ej: PI=3.14
+
+Se puede guardar la función en una variable
+
+```
+c=factorial
+c(5)
+#tendrá salida 120
+```
+
+
+Se puede llamar a la función así:
+
+```
+factorial(5)
+```
+
+o así:
+
+```
+factorial(n=5)
+```
+
+
+Se puede pasar una serie de argumentos ilimitados a una función con 'args' y 'kwargs'
+
+```
+>>> def sumar(n,*args):
+>>> resultado=n
+>>> for i in args:
+>>> resultado+=i
+>>> return resultado
+>>> sumar(2) 2
+>>> sumar(2,3,4) 9
+```
+
+
+```
+>>> def saludar(nombre="pepe",**kwargs): 
+>>> cadena=nombre 
+>>> for valor in kwargs.values():
+>>> cadena=cadena+" "+valor
+>>> return "Hola "+cadena
+>>> saludar() 'Hola pepe'
+>>> saludar("juan") 'Hola juan'
+>>> saludar(nombre="juan",nombre2="pepe")'Hola juan pepe'
+>>> saludar(nombre="juan",nombre2="pepe",nombre3="maria") 'Hola juan maria pepe'
+```
+
+
+Pasar argumentos guardados en listas o diccionarios
+
+```
+>>> lista=[1,2,3]
+>>> sumar(*lista) 6 
+>>> sumar(2,*lista) 8 
+>>> sumar(2,3,*lista) 11
+```
+
+```
+>>> datos={"nombre":"jose","nombre2":"pepe","nombre3":"maria"} 
+>>> saludar(**datos) 'Hola jose maria pepe'
+```
+
+
+Devolver varios resultados
+
+```
+>>> def operar(n1,n2):
+>>> return (n1+n2,n1-n2,n1*n2)
+>>> suma,resta,producto = operar(5,2)
+>>> suma 7
+>>> resta 3 
+>>> producto 10
+```
+
+
+###  FUNCIONES ESPECIALES
+
+##### FUNCIONES LAMBDA
+
+para definir una función pequeña y temporal
+
+```
+lambda argumentos: expresion
+```
+
+EJ:
+
+```
+suma = lambda x, y: x + y
+
+print(suma(3, 5))  # Salida: 8
+
+```
+
+##### DECORADORES
+
+ Son funciones que reciben como parámetros otras funciones y retornan como resultado otras funciones con el objetivo de alterar el funcionamiento original de la función que se pasa como parámetro.
+```
+>>> def tablas(funcion): ... def envoltura(tabla=1): ... 
+>>> print('Tabla del %i:' %tabla) ... print('-' * 15) ... 
+>>> for numero in range(0, 11): ... funcion(numero, tabla) ... 
+>>> print('-' * 15) ... return envoltura ... >>> 
+>>> @tablas ... 
+>>> def suma(numero, tabla=1): ... 
+>>> print('%2i + %2i = %3i' %(tabla, numero, tabla+numero)) ... >>> 
+>>> @tablas ...
+>>> def multiplicar(numero, tabla=1): ... 
+>>> print('%2i X %2i = %3i' %(tabla, numero, tabla*numero)) 
+>>> # Muestra la tabla de sumar del 1 
+>>> suma() 
+>>> # Muestra la tabla de sumar del 4 
+>>> suma(4) 
+>>> # Muestra la tabla de multiplicar del 1 
+>>> multiplicar() 
+>>> # Muestra la tabla de multiplicar del 10 
+>>> multiplicar(10)
+```
+
+
+
+
+## PROGRAMACIÓN ORIENTADA A OBJETOS
+
+Vamos a crear una clase Punto con su correspondiente constructor y una función que calcule la distancia entre 2 puntos
+
+```
+class punto(): 
+""" Representación de un punto en el plano, los atributos son x e y que representan los valores de las coordenadas cartesianas.""" 
+def __init__(self,x=0,y=0): self.x=x self.y=y def distancia(self, otro): 
+""" Devuelve la distancia entre ambos puntos. """ 
+dx = self.x - otro.x dy = self.y - otro.y 
+return math.sqrt((dx*dx + dy*dy))
+```
+def _init_ siempre se le llama al contstructor
+
+Así creamos 2 objetos Punto y calculamos la distancia entre ellos
+
+```
+punto1=punto() 
+punto2=punto(4,5)
+print(punto1.distancia(punto2)) 
+# salida-->6.4031242374328485
+```
+
+Podemos cambiar el valor de un atributo de un objeto directamente(set en Java)
+
+```
+>>> punto2.x 
+#salida--> 4 
+>>> punto2.x = 7 >>> 
+punto2.x 
+#salida--> 7
+```
+
+Variable estática-->variable que se define en la clase y la comparten todos los objetos
+
+```
+>>> class Alumno():
+>>> contador=0
+>>> def __init__(self,nombre=""):
+>>> self.nombre=nombre
+>>> Alumno.contador+=1
+
+>>> a1=Alumno("jose")
+>>> a1.contador 
+#salida--> 1
+>>> Alumno.contador 
+#salida--> 1
+```
+
+Si la variable empieza por _ es PRIVADA
+
+__ TODAVÍA MÁS PRIVADA
+
+
+getattr-->get en Java
+setattr-->set en Java
+delattr-->elimina el atributo
+hasattr-->true/false si el objeto tiene un atributo concreto
+
+```
+>>> a1=Alumno("jose")
+>>> getattr(a1,"nombre") 
+#salida--> 'jose'
+>>> getattr(a1,"edad","no tiene") 
+#salida-->  'no tiene'
+>>> setattr(a1,"nombre","pepe")
+>>> a1.nombre 'pepe'
+>>> hasattr(a1,"nombre") 
+#salida--> True
+>>> delattr(a1,"nombre")
+```
+
