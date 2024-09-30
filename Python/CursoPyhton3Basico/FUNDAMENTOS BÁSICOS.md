@@ -1,10 +1,31 @@
-- [Operadores](#Operadores)
--  [Funciones básicas](#Funciones Básicas)
-- [Sección 2](#sección-2)
-- [Sección 2](#sección-2)
-  - [Subsección A](#subsección-a)
-  - [Subsección B](#subsección-b)
-- [Sección 3](#sección-3)
+# Índice
+
+
+- [Operadores](#operadores)
+- [Funciones_básicas](#funciones_básicas)
+- [If-Else](#if-else)
+- [While](#while)
+- [For](#for)
+- [Listas](#listas)
+- [Tuplas](#tuplas)
+- [Rangos](#rangos)
+- [Strings](#strings)
+- [Conjuntos](#conjuntos)
+- [Diccionarios](#diccionarios)
+- [Ficheros](#ficheros)
+- [CSV](#csv)
+- [JSON](#json)
+- [Excepciones](#excepciones)
+- [Módulos](#módulos)
+  - [Módulos_de_sistemas](#módulos_de_sistemas)
+  - [Módulos_de_operaciones_matemáticas](#módulos_de_operaciones_matemáticas)
+  - [Módulos_de_fecha,hora](#módulos_de_fecha,hora)
+- [Programación_estructurada_y_modular](#programación_estructurada,modular)
+- [Funciones_especiales](#funciones_especiales)
+  - [Funciones_lambda](#funciones_lambda)
+  - [Decoradores](#decoradores)
+- [Programación_orientada_a_objetos](#programación_orientada_a_objetos)
+
 
 
 ![[cap1Python.png]]
@@ -15,7 +36,7 @@
 **Se pueden declarar varias variables a la vez
 ![[cap11Python.png]]
 Así se pasa por teclado
-## Funciones Básicas
+## Funciones_Básicas
 
 #### Función para parsear
 Simplemente se usa el tipo de dato y entre () el valor que se quiere parsear
@@ -64,9 +85,24 @@ while año<=2017:
 ## FOR
 ![[cap3PyFor.png]]
 **Recorriendo un array**
+~~~
+Definir una lista mi_lista = [1, 2, 3, 4, 5] 
+# Recorrer la lista for elemento in mi_lista: print(elemento)
 ![[ForEnUnArray.png]]
+~~~
+
+
 **Recorriendo 2 arrays a la vez**
-![[Recorrer2ForALaVez.png]]
+~~~
+# Definir dos listas
+lista1 = [1, 2, 3, 4, 5]
+lista2 = ['a', 'b', 'c', 'd', 'e']
+
+# Recorrer ambas listas a la vez
+for elemento1, elemento2 in zip(lista1, lista2):
+    print(elemento1, elemento2)
+~~~
+
 
 ## LISTAS
 
@@ -839,9 +875,9 @@ para ver un dato cualquiera:
 
 ## MÓDULOS
 
-### Módulos de sistemas
+### Módulos_de_sistemas
 
-##### Módulo os
+##### Módulo_os
 
 El módulo [os](https://docs.python.org/3.4/library/os.html#module-os) nos permite acceder a funcionalidades dependientes del Sistema Operativo. Sobre todo, aquellas que nos refieren información sobre el entorno del mismo y nos permiten manipular la estructura de directorios.
 
@@ -917,7 +953,7 @@ README.md
 >>> salida.communicate()[0]
 ```
 
-##### Módulo shutil
+##### Módulo_shutil
 
 El módulo [shutil](https://docs.python.org/3.4/library/shutil.html#module-shutil) de funciones para realizar operaciones de alto nivel con archivos y directorios. Dentro de las operaciones que se pueden realizar está copiar, mover y borrar archivos y directorios; y copiar los permisos y el estado de los archivos.
 
@@ -933,7 +969,7 @@ El módulo [shutil](https://docs.python.org/3.4/library/shutil.html#module-shut
 |Obtener la ruta de un archivo ejecutable|`shutil.chown(path, user=None, group=None)`|
 |Saber si una ruta es un enlace simbólico|`shutil.which(cmd, mode=os.F_OK \| os.X_OK, path=None)`|
 
-##### Módulos sys
+##### Módulos_sys
 
 El módulo [sys](https://docs.python.org/3.4/library/sys.html#module-sys) es el encargado de proveer variables y funcionalidades, directamente relacionadas con el intérprete.
 
@@ -972,8 +1008,8 @@ La suma es  12
 ```
 
 
-### Módulos de operaciones matemáticas
-##### Módulo Math
+### Módulos_de_operaciones_matemáticas
+##### Módulo_Math
 El módulo [math](https://docs.python.org/3.4/library/math.html) nos proporciones distintas funciones y operaciones matemáticas.
 
 ```
@@ -992,7 +1028,7 @@ El módulo [math](https://docs.python.org/3.4/library/math.html) nos proporcio
 2.302585092994046
 ```
 
-##### Módulo fractions
+##### Módulo_fractions
 
 El módulo [fractions](https://docs.python.org/3.4/library/fractions.html) nos permite trabajar con fracciones.
 
@@ -1007,7 +1043,7 @@ Fraction(3, 2)
 Fraction(13, 6)
 ```
 
-##### Módulo statistics
+##### Módulo_statistics
 
 El módulo [statistics](https://docs.python.org/3.4/library/statistics.html) nos proporciona funciones para hacer operaciones estadísticas.
 
@@ -1020,7 +1056,7 @@ El módulo [statistics](https://docs.python.org/3.4/library/statistics.html) n
 4
 ```
 
-##### Módulo random
+##### Módulo_random
 
 El módulo [random](https://docs.python.org/3.4/library/random.html) nos permite generar datos pseudo-aleatorios.
 
@@ -1043,8 +1079,8 @@ El módulo [random](https://docs.python.org/3.4/library/random.html) nos permi
 [1, 2, 4]
 ```
 
-### MÓDULOS DE FECHA Y HORA
-##### Módulo time
+### MÓDULOS_DE_FECHA,HORA
+##### Módulo_time
 
 El tiempo es medido como un número real que representa los segundos transcurridos desde el 1 de enero de 1970. Por lo tanto es imposible representar fechas anteriores a esta y fechas a partir de 2038 (tamaño del float en la lubraría C (32 bits)).
 
@@ -1096,7 +1132,7 @@ O con un determinado formato:
 ```
 
 
-##### Módulo datetime
+##### Módulo_datetime
 
 Los módulos datetime y calendar amplían las posibilidades del módulo time que provee funciones para manipular expresiones de tiempo.
 
@@ -1158,7 +1194,7 @@ datetime.timedelta(1)
 datetime.timedelta(7813, 81981, 333199)
 ```
 
-##### Módulo calendar
+##### Módulo_calendar
 
 Podemos obtener el calendario del mes actual:
 
@@ -1182,18 +1218,18 @@ Y para mostrar todos los meses del año:
 >>> print(calendar.TextCalendar(calendar.MONDAY).formatyear(2017,2, 1, 1, 2))
 ```
 
-### Instalar módulos externos
+### Instalar_módulos_externos
 
 Python posse una activa comunidad de desarrolladores y usuarios que desarrollan toanto los módulos estándar de python, como módulos y paquetes desarolados por terceros.
 
-##### PyPI y pip
+##### PyPI,pip
 
 - El _Python Package Index_ o _PyPI_, es el repositorio de paquetes de software oficial para aplicaciones de terceros en el lenguaje de programación Python.
     
 - `pip`: Sistema de gestión de paquetes utilizado para instalar y administrar paquetes de software escritos en Python que se encuentran alojados en el repositorio _PyPI_.
     
 
-##### Instalación de módulos python
+##### Instalación_de_módulos_python
 
 Para instalar un nuevo paquete python tengo varias alternativas:
 
@@ -1218,7 +1254,7 @@ Para instalar un nuevo paquete python tengo varias alternativas:
 3. Utilizar entornos virtuales: es un mecanismo que me permite gestionar programas y paquetes python sin tener permisos de administración, es decir, cualquier usuario sin privilegios puede tener uno o más “espacios aislados” (ya veremos más adelante que los entornos virtuales se guardan en directorios) donde poder instalar distintas versiones de programas y paquetes python. Para crear los entornos virtuales vamos a usar el programa `virtualenv` o el módulo `venv`.
     
 
-###### Creando entornos virtuales con `virtualenv`
+###### Creando_entornos_virtuales con_virtualenv`
 
 Podemos utilizar este software para trabajar con cualquier distribución de python, pero evidentemente es obligatorio si estamos trabajando con python 2.x o python 3.x (una versión anterior a la 3.3).
 
@@ -1248,7 +1284,7 @@ Y para desactivarlo:
 $
 ```
 
-###### Creando entornos virtuales con `venv`
+###### Creando_entornos_virtuales_con_venv`
 
 A partir de la versión 3.3 de python podemos utilizar el módulo `venv` para crear el entorno virtual.
 
@@ -1274,7 +1310,7 @@ $ source entorno3/bin/activate
 $ 
 ```
 
-###### Instalando paquetes en nuestro entorno virtual
+###### Instalando_paquetes_en_nuestro_entorno_virtual
 
 Independientemente del sistema utilizado para crear nuestro entorno virtual, una vez que lo tenemos activado podemos instalar paquetes python en él utilizando la herramienta `pip` (que la tenemos instalada automáticamente en nuestro entorno). Partiendo de un entorno activado, podemos, por ejemplo, instalar la última versión de django:
 
@@ -1337,7 +1373,7 @@ De tal manera que otro usuario, en otro entorno, teniendo este fichero pude repr
 
 
 
-## PROGRAMACIÓN ESTRUCTURADA Y MODULAR
+## PROGRAMACIÓN_ESTRUCTURADA,MODULAR
 
 Así se declara una función:
 
@@ -1434,9 +1470,9 @@ Devolver varios resultados
 ```
 
 
-###  FUNCIONES ESPECIALES
+###  FUNCIONES_ESPECIALES
 
-##### FUNCIONES LAMBDA
+##### FUNCIONES_LAMBDA
 
 para definir una función pequeña y temporal
 
@@ -1480,7 +1516,7 @@ print(suma(3, 5))  # Salida: 8
 
 
 
-## PROGRAMACIÓN ORIENTADA A OBJETOS
+## PROGRAMACIÓN_ORIENTADA_A_OBJETOS
 
 Vamos a crear una clase Punto con su correspondiente constructor y una función que calcule la distancia entre 2 puntos
 
